@@ -54,10 +54,10 @@ function draw(slots){
   }
   function cell(px, py, s){
     const cx = px + C/2, cy = py + C/2, fill = RING[s.ring] || "#1f7a8a", ink = s.ring <= 2 ? "#fff" : "#000";
-    let name = s.player || ("#" + s.n); if (name.length > 11) name = name.slice(0,10) + "…";
+    let name = s.player || ("#" + s.n); if (name.length > 10) name = name.slice(0,9) + "…";
     g.push(`<rect x="${px}" y="${py}" width="${C}" height="${C}" fill="${fill}" stroke="#000" stroke-width="1"/>`);
-    g.push(`<text x="${cx}" y="${cy-2}" font-size="${name.length <= 8 ? 11 : 9}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(name)}</text>`);
-    g.push(`<text x="${cx}" y="${cy+12}" font-size="10" fill="${ink}" text-anchor="middle">${s.x}:${s.y}</text>`);
+    g.push(`<text x="${cx}" y="${cy-3}" font-size="${name.length <= 7 ? 15 : 12}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(name)}</text>`);
+    g.push(`<text x="${cx}" y="${cy+15}" font-size="13" fill="${ink}" text-anchor="middle">${s.x}:${s.y}</text>`);
   }
   let xoff = pad;
   for (const b of blocks) {
@@ -65,14 +65,19 @@ function draw(slots){
     const trapRows = b.rows.map((r,i) => [r.xv,i]).filter(([xv]) => xv === b.t[0]-1 || xv === b.t[0]+1).map(([,i]) => i);
     b.rows.forEach((r, ri) => {
       const py = pad + top + ri*(C+GAP);
+      for (let c = 0; c < b.ncols; c++) {  // unused spots of the block's rectangle in light grey
+        const used = (c < tcol && c >= tcol - r.left.length) || (c > tcol && c <= tcol + r.right.length) || c === tcol;
+        if (!used) g.push(`<rect x="${xoff + c*(C+GAP)}" y="${py}" width="${C}" height="${C}" fill="#e4e6e3"/>`);
+      }
       [...r.left].reverse().forEach((s,k) => cell(xoff + (tcol-1-k)*(C+GAP), py, s));
       r.right.forEach((s,k) => cell(xoff + (tcol+1+k)*(C+GAP), py, s));
     });
     const r0 = Math.min(...trapRows), r1 = Math.max(...trapRows);
+    b.rows.forEach((r, ri) => { if (ri < r0 || ri > r1) g.push(`<rect x="${xoff + tcol*(C+GAP)}" y="${pad + top + ri*(C+GAP)}" width="${C}" height="${C}" fill="#e4e6e3"/>`); });
     const px = xoff + tcol*(C+GAP), py = pad + top + r0*(C+GAP), h = (r1-r0+1)*(C+GAP) - GAP;
     g.push(`<rect x="${px}" y="${py}" width="${C}" height="${h}" fill="#b5482e" stroke="#000" stroke-width="1"/>`);
     g.push(`<text x="${px+C/2}" y="${py+h/2-2}" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">BEAR TRAP ${b.nm}</text>`);
-    g.push(`<text x="${px+C/2}" y="${py+h/2+12}" font-size="11" fill="#fff" text-anchor="middle">${b.t[0]}:${b.t[1]}</text>`);
+    g.push(`<text x="${px+C/2}" y="${py+h/2+14}" font-size="13" fill="#fff" text-anchor="middle">${b.t[0]}:${b.t[1]}</text>`);
     xoff += b.ncols*(C+GAP) + C;
   }
   document.getElementById("poster").innerHTML =
