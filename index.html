@@ -10,10 +10,12 @@ body{margin:0;background:#fff;color:#000;font-family:"Helvetica Neue",Arial,sans
 .poster svg{display:block;width:100%;height:auto}
 p.hint{max-width:60ch;margin:12px auto 0;font-size:1.1rem;color:#000;text-align:center}
 p.err{max-width:60ch;margin:40px auto;text-align:center;color:#8a2a1a}
+nav{text-align:center;font-size:.95rem;margin:6px 0 4px}nav a{color:#1f5f6b;margin:0 10px}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
+<nav><a href="map.html">Map with terrain and banners</a> · <a href="hive_mapper.csv" download>CSV for the Kingshot Mapper</a> · <a href="hive_workbook.xlsx" download>Workbook</a></nav>
 <div class="poster" id="poster"></div>
 <p class="hint">Find your name, teleport to the X:Y in your cell. Pinch to zoom on a phone.</p>
 <script>
