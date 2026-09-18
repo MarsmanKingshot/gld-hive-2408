@@ -35,7 +35,7 @@ function draw(slots){
   const ys = slots.map(s => s.y).concat(traps.map(n => TRAPS[n][1] - 1));
   const X0 = Math.min(...xs), X1 = Math.max(...xs) + 2, Y0 = Math.min(...ys), Y1 = Math.max(...ys) + 2;
   const W = pad*2 + (Y1 - Y0)*U, H = pad*2 + top + (X1 - X0)*U;
-  const px = y => pad + (y - Y0)*U, py = x => pad + top + (X1 - x)*U;  // top-left corner of a footprint at (x, y) with height h: py(x + h)
+  const px = y => pad + (Y1 - y)*U, py = x => pad + top + (X1 - x)*U;  // y increases to the LEFT as in the game; top-left corner of a footprint at (x, y) with width w: px(y + w)
   const g = [];
   g.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>`);
   const rings = [...new Set(slots.map(s => s.ring))].sort();  // legend only for rings that exist
@@ -45,9 +45,9 @@ function draw(slots){
     g.push(`<text x="${lx+34}" y="${pad+20}" font-size="20" fill="#000">ring ${r}</text>`);
     lx += 120;
   }
-  g.push(`<rect x="${px(Y0)}" y="${py(X1)}" width="${(Y1-Y0)*U}" height="${(X1-X0)*U}" fill="#e4e6e3"/>`);
+  g.push(`<rect x="${px(Y1)}" y="${py(X1)}" width="${(Y1-Y0)*U}" height="${(X1-X0)*U}" fill="#e4e6e3"/>`);
   for (const s of slots) {
-    const x0 = px(s.y), y0 = py(s.x + 2), cx = x0 + U, cy = y0 + U;
+    const x0 = px(s.y + 2), y0 = py(s.x + 2), cx = x0 + U, cy = y0 + U;
     const fill = RING[s.ring] || "#1f7a8a", ink = s.ring <= 2 ? "#fff" : "#000";
     let name = s.player || ("#" + s.n); if (name.length > 10) name = name.slice(0,9) + "…";
     g.push(`<rect x="${x0}" y="${y0}" width="${2*U}" height="${2*U}" fill="${fill}" stroke="#000" stroke-width="1"/>`);
@@ -55,7 +55,7 @@ function draw(slots){
     g.push(`<text x="${cx}" y="${cy+15}" font-size="13" fill="${ink}" text-anchor="middle">${s.x}:${s.y}</text>`);
   }
   for (const nm of traps) {
-    const t = TRAPS[nm], x0 = px(t[1]-1), y0 = py(t[0]+2), cx = x0 + 1.5*U, cy = y0 + 1.5*U;
+    const t = TRAPS[nm], x0 = px(t[1]+2), y0 = py(t[0]+2), cx = x0 + 1.5*U, cy = y0 + 1.5*U;
     g.push(`<rect x="${x0}" y="${y0}" width="${3*U}" height="${3*U}" fill="#b5482e" stroke="#000" stroke-width="1"/>`);
     g.push(`<text x="${cx}" y="${cy-3}" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">BEAR TRAP ${nm}</text>`);
     g.push(`<text x="${cx}" y="${cy+15}" font-size="13" fill="#fff" text-anchor="middle">${t[0]}:${t[1]}</text>`);
