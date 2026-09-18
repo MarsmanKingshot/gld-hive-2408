@@ -27,21 +27,15 @@ const only = Number(new URLSearchParams(location.search).get("trap")) || 0;
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 
 function draw(slots){
-  const C = 70, GAP = 5, pad = 24, top = 100;
+  // true positions: y runs to the right, x upward; U px per tile, a 2x2 seat is 2U square
+  const U = 35, pad = 24, top = 100;
   const traps = only ? [only] : [1, 2];
-  const blocks = traps.map(nm => {
-    const t = TRAPS[nm], mine = slots.filter(s => s.trap === nm);
-    const xs = [...new Set(mine.map(s => s.x).concat([t[0]-1, t[0]+1]))].sort((a,b) => b-a);
-    const rows = xs.map(xv => {
-      const cells = mine.filter(s => s.x === xv).sort((a,b) => a.y-b.y);
-      return {xv, left: cells.filter(c => c.y < t[1]), right: cells.filter(c => c.y > t[1])};
-    });
-    const lmax = Math.max(...rows.map(r => r.left.length)), rmax = Math.max(...rows.map(r => r.right.length));
-    return {nm, t, rows, lmax, ncols: lmax + 1 + rmax};
-  });
-  const nrows = Math.max(...blocks.map(b => b.rows.length));
-  const W = pad*2 + blocks.reduce((a,b) => a + b.ncols*(C+GAP), 0) + (blocks.length > 1 ? C : 0);
-  const H = pad*2 + top + nrows*(C+GAP);
+  if (only) slots = slots.filter(s => s.trap === only);
+  const xs = slots.map(s => s.x).concat(traps.map(n => TRAPS[n][0] - 1));
+  const ys = slots.map(s => s.y).concat(traps.map(n => TRAPS[n][1] - 1));
+  const X0 = Math.min(...xs), X1 = Math.max(...xs) + 2, Y0 = Math.min(...ys), Y1 = Math.max(...ys) + 2;
+  const W = pad*2 + (Y1 - Y0)*U, H = pad*2 + top + (X1 - X0)*U;
+  const px = y => pad + (y - Y0)*U, py = x => pad + top + (X1 - x)*U;  // top-left corner of a footprint at (x, y) with height h: py(x + h)
   const g = [];
   g.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>`);
   g.push(`<text x="${W/2}" y="40" font-size="28" font-weight="700" fill="#000" text-anchor="middle">${esc(TITLE)}</text>`);
@@ -52,33 +46,20 @@ function draw(slots){
     g.push(`<text x="${lx+19}" y="${top+4}" font-size="12" fill="#000">ring ${r}</text>`);
     lx += 70;
   }
-  function cell(px, py, s){
-    const cx = px + C/2, cy = py + C/2, fill = RING[s.ring] || "#1f7a8a", ink = s.ring <= 2 ? "#fff" : "#000";
+  g.push(`<rect x="${px(Y0)}" y="${py(X1)}" width="${(Y1-Y0)*U}" height="${(X1-X0)*U}" fill="#e4e6e3"/>`);
+  for (const s of slots) {
+    const x0 = px(s.y), y0 = py(s.x + 2), cx = x0 + U, cy = y0 + U;
+    const fill = RING[s.ring] || "#1f7a8a", ink = s.ring <= 2 ? "#fff" : "#000";
     let name = s.player || ("#" + s.n); if (name.length > 10) name = name.slice(0,9) + "…";
-    g.push(`<rect x="${px}" y="${py}" width="${C}" height="${C}" fill="${fill}" stroke="#000" stroke-width="1"/>`);
+    g.push(`<rect x="${x0}" y="${y0}" width="${2*U}" height="${2*U}" fill="${fill}" stroke="#000" stroke-width="1"/>`);
     g.push(`<text x="${cx}" y="${cy-3}" font-size="${name.length <= 7 ? 15 : 12}" font-weight="700" fill="${ink}" text-anchor="middle">${esc(name)}</text>`);
     g.push(`<text x="${cx}" y="${cy+15}" font-size="13" fill="${ink}" text-anchor="middle">${s.x}:${s.y}</text>`);
   }
-  let xoff = pad;
-  for (const b of blocks) {
-    const tcol = b.lmax;
-    const trapRows = b.rows.map((r,i) => [r.xv,i]).filter(([xv]) => xv === b.t[0]-1 || xv === b.t[0]+1).map(([,i]) => i);
-    b.rows.forEach((r, ri) => {
-      const py = pad + top + ri*(C+GAP);
-      for (let c = 0; c < b.ncols; c++) {  // unused spots of the block's rectangle in light grey
-        const used = (c < tcol && c >= tcol - r.left.length) || (c > tcol && c <= tcol + r.right.length) || c === tcol;
-        if (!used) g.push(`<rect x="${xoff + c*(C+GAP)}" y="${py}" width="${C}" height="${C}" fill="#e4e6e3"/>`);
-      }
-      [...r.left].reverse().forEach((s,k) => cell(xoff + (tcol-1-k)*(C+GAP), py, s));
-      r.right.forEach((s,k) => cell(xoff + (tcol+1+k)*(C+GAP), py, s));
-    });
-    const r0 = Math.min(...trapRows), r1 = Math.max(...trapRows);
-    b.rows.forEach((r, ri) => { if (ri < r0 || ri > r1) g.push(`<rect x="${xoff + tcol*(C+GAP)}" y="${pad + top + ri*(C+GAP)}" width="${C}" height="${C}" fill="#e4e6e3"/>`); });
-    const px = xoff + tcol*(C+GAP), py = pad + top + r0*(C+GAP), h = (r1-r0+1)*(C+GAP) - GAP;
-    g.push(`<rect x="${px}" y="${py}" width="${C}" height="${h}" fill="#b5482e" stroke="#000" stroke-width="1"/>`);
-    g.push(`<text x="${px+C/2}" y="${py+h/2-2}" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">BEAR TRAP ${b.nm}</text>`);
-    g.push(`<text x="${px+C/2}" y="${py+h/2+14}" font-size="13" fill="#fff" text-anchor="middle">${b.t[0]}:${b.t[1]}</text>`);
-    xoff += b.ncols*(C+GAP) + C;
+  for (const nm of traps) {
+    const t = TRAPS[nm], x0 = px(t[1]-1), y0 = py(t[0]+2), cx = x0 + 1.5*U, cy = y0 + 1.5*U;
+    g.push(`<rect x="${x0}" y="${y0}" width="${3*U}" height="${3*U}" fill="#b5482e" stroke="#000" stroke-width="1"/>`);
+    g.push(`<text x="${cx}" y="${cy-3}" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">BEAR TRAP ${nm}</text>`);
+    g.push(`<text x="${cx}" y="${cy+15}" font-size="13" fill="#fff" text-anchor="middle">${t[0]}:${t[1]}</text>`);
   }
   document.getElementById("poster").innerHTML =
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" font-family="Helvetica Neue, Arial, sans-serif">${g.join("")}</svg>`;
