@@ -8,7 +8,7 @@
 body{margin:0;background:#fff;color:#000;font-family:"Helvetica Neue",Arial,sans-serif;padding:8px 12px 24px}
 .poster{max-width:1700px;margin:0 auto}
 .poster svg{display:block;width:100%;height:auto}
-p.hint{max-width:60ch;margin:12px auto 0;font-size:.9rem;color:#4a5a4a;text-align:center}
+p.hint{max-width:60ch;margin:12px auto 0;font-size:1.1rem;color:#000;text-align:center}
 p.err{max-width:60ch;margin:40px auto;text-align:center;color:#8a2a1a}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -28,7 +28,7 @@ function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt
 
 function draw(slots){
   // true positions: y runs to the right, x upward; U px per tile, a 2x2 seat is 2U square
-  const U = 35, pad = 24, top = 100;
+  const U = 35, pad = 24, top = 44;
   const traps = only ? [only] : [1, 2];
   if (only) slots = slots.filter(s => s.trap === only);
   const xs = slots.map(s => s.x).concat(traps.map(n => TRAPS[n][0] - 1));
@@ -38,13 +38,11 @@ function draw(slots){
   const px = y => pad + (y - Y0)*U, py = x => pad + top + (X1 - x)*U;  // top-left corner of a footprint at (x, y) with height h: py(x + h)
   const g = [];
   g.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>`);
-  g.push(`<text x="${W/2}" y="40" font-size="28" font-weight="700" fill="#000" text-anchor="middle">${esc(TITLE)}</text>`);
-  g.push(`<text x="${W/2}" y="66" font-size="14" fill="#000" text-anchor="middle">Find your name, teleport to the X:Y in your cell.</text>`);
-  let lx = W/2 - 4*70;
+  let lx = W/2 - 4*120 + 20;
   for (const r of [1,2,3,4]) {
-    g.push(`<rect x="${lx}" y="${top-8}" width="14" height="14" fill="${RING[r]}" stroke="#000" stroke-width=".8"/>`);
-    g.push(`<text x="${lx+19}" y="${top+4}" font-size="12" fill="#000">ring ${r}</text>`);
-    lx += 70;
+    g.push(`<rect x="${lx}" y="${pad}" width="26" height="26" fill="${RING[r]}" stroke="#000" stroke-width="1"/>`);
+    g.push(`<text x="${lx+34}" y="${pad+20}" font-size="20" fill="#000">ring ${r}</text>`);
+    lx += 120;
   }
   g.push(`<rect x="${px(Y0)}" y="${py(X1)}" width="${(Y1-Y0)*U}" height="${(X1-X0)*U}" fill="#e4e6e3"/>`);
   for (const s of slots) {
