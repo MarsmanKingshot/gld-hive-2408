@@ -38,8 +38,9 @@ function draw(slots){
   const px = y => pad + (y - Y0)*U, py = x => pad + top + (X1 - x)*U;  // top-left corner of a footprint at (x, y) with height h: py(x + h)
   const g = [];
   g.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>`);
-  let lx = W/2 - 4*120 + 20;
-  for (const r of [1,2,3,4]) {
+  const rings = [...new Set(slots.map(s => s.ring))].sort();  // legend only for rings that exist
+  let lx = W/2 - rings.length*60;
+  for (const r of rings) {
     g.push(`<rect x="${lx}" y="${pad}" width="26" height="26" fill="${RING[r]}" stroke="#000" stroke-width="1"/>`);
     g.push(`<text x="${lx+34}" y="${pad+20}" font-size="20" fill="#000">ring ${r}</text>`);
     lx += 120;
