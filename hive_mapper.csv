@@ -1,107 +1,107 @@
-# South block, HQ stays at 755:469: traps, HQ, 100 city slots. Mapper convention: X,Y = lower corner.
+# South block, HQ stays at 755:469 (lower-left tile): traps, HQ, 100 city slots. Mapper convention: X,Y = lower corner.
 beartrap,742,461,Trap 1,#c0392b,1
 beartrap,742,477,Trap 2,#c0392b,2
-hq,754,468,HQ,#8e44ad,0
-city,740,461,City 1,#4a9edd,1
-city,740,477,City 2,#4a9edd,2
-city,742,459,City 3,#4a9edd,3
-city,742,475,City 4,#4a9edd,4
-city,740,463,City 5,#4a9edd,5
-city,740,479,City 6,#4a9edd,6
-city,744,459,City 7,#4a9edd,7
-city,744,475,City 8,#4a9edd,8
-city,740,459,City 9,#4a9edd,9
-city,740,475,City 10,#4a9edd,10
+hq,755,469,HQ,#8e44ad,0
+city,742,475,City 1,#4a9edd,1
+city,742,459,City 2,#4a9edd,2
+city,740,477,City 3,#4a9edd,3
+city,740,461,City 4,#4a9edd,4
+city,744,475,City 5,#4a9edd,5
+city,744,459,City 6,#4a9edd,6
+city,740,463,City 7,#4a9edd,7
+city,740,479,City 8,#4a9edd,8
+city,746,477,City 9,#4a9edd,9
+city,746,461,City 10,#4a9edd,10
 city,742,465,City 11,#4a9edd,11
-city,742,481,City 12,#4a9edd,12
-city,746,461,City 13,#4a9edd,13
-city,746,477,City 14,#4a9edd,14
-city,744,465,City 15,#4a9edd,15
-city,744,481,City 16,#4a9edd,16
-city,746,463,City 17,#4a9edd,17
-city,746,479,City 18,#4a9edd,18
-city,740,465,City 19,#4a9edd,19
-city,740,481,City 20,#4a9edd,20
-city,746,459,City 21,#4a9edd,21
-city,746,475,City 22,#4a9edd,22
-city,738,461,City 23,#4a9edd,23
-city,738,477,City 24,#4a9edd,24
-city,742,457,City 25,#4a9edd,25
-city,742,473,City 26,#4a9edd,26
-city,738,463,City 27,#4a9edd,27
-city,738,479,City 28,#4a9edd,28
-city,744,457,City 29,#4a9edd,29
-city,744,473,City 30,#4a9edd,30
+city,740,475,City 12,#4a9edd,12
+city,742,481,City 13,#4a9edd,13
+city,740,459,City 14,#4a9edd,14
+city,746,463,City 15,#4a9edd,15
+city,744,465,City 16,#4a9edd,16
+city,746,479,City 17,#4a9edd,17
+city,744,481,City 18,#4a9edd,18
+city,746,475,City 19,#4a9edd,19
+city,746,459,City 20,#4a9edd,20
+city,740,465,City 21,#4a9edd,21
+city,740,481,City 22,#4a9edd,22
+city,742,473,City 23,#4a9edd,23
+city,742,457,City 24,#4a9edd,24
+city,738,477,City 25,#4a9edd,25
+city,738,461,City 26,#4a9edd,26
+city,744,473,City 27,#4a9edd,27
+city,744,457,City 28,#4a9edd,28
+city,738,463,City 29,#4a9edd,29
+city,738,479,City 30,#4a9edd,30
 city,746,465,City 31,#4a9edd,31
 city,746,481,City 32,#4a9edd,32
-city,738,459,City 33,#4a9edd,33
+city,740,473,City 33,#4a9edd,33
 city,738,475,City 34,#4a9edd,34
 city,740,457,City 35,#4a9edd,35
-city,740,473,City 36,#4a9edd,36
-city,742,467,City 37,#4a9edd,37
-city,742,483,City 38,#4a9edd,38
-city,748,461,City 39,#4a9edd,39
-city,748,477,City 40,#4a9edd,40
-city,738,465,City 41,#4a9edd,41
-city,738,481,City 42,#4a9edd,42
-city,744,467,City 43,#4a9edd,43
-city,744,483,City 44,#4a9edd,44
-city,746,473,City 45,#4a9edd,45
-city,748,463,City 46,#4a9edd,46
-city,748,479,City 47,#4a9edd,47
-city,740,467,City 48,#4a9edd,48
-city,740,483,City 49,#4a9edd,49
-city,748,459,City 50,#4a9edd,50
-city,748,475,City 51,#4a9edd,51
-city,736,461,City 52,#4a9edd,52
-city,736,477,City 53,#4a9edd,53
-city,742,455,City 54,#4a9edd,54
-city,742,471,City 55,#4a9edd,55
-city,746,467,City 56,#4a9edd,56
-city,746,483,City 57,#4a9edd,57
-city,748,465,City 58,#4a9edd,58
-city,748,481,City 59,#4a9edd,59
-city,736,463,City 60,#4a9edd,60
-city,736,479,City 61,#4a9edd,61
-city,744,455,City 62,#4a9edd,62
-city,744,471,City 63,#4a9edd,63
-city,736,459,City 64,#4a9edd,64
-city,736,475,City 65,#4a9edd,65
-city,740,455,City 66,#4a9edd,66
-city,740,471,City 67,#4a9edd,67
-city,738,467,City 68,#4a9edd,68
-city,738,483,City 69,#4a9edd,69
-city,748,457,City 70,#4a9edd,70
-city,748,473,City 71,#4a9edd,71
-city,746,455,City 72,#4a9edd,72
-city,746,471,City 73,#4a9edd,73
-city,742,485,City 74,#4a9edd,74
-city,750,461,City 75,#4a9edd,75
-city,750,477,City 76,#4a9edd,76
-city,744,485,City 77,#4a9edd,77
-city,750,463,City 78,#4a9edd,78
-city,750,479,City 79,#4a9edd,79
-city,748,467,City 80,#4a9edd,80
-city,748,483,City 81,#4a9edd,81
-city,736,457,City 82,#4a9edd,82
-city,736,473,City 83,#4a9edd,83
-city,738,455,City 84,#4a9edd,84
-city,738,471,City 85,#4a9edd,85
-city,740,485,City 86,#4a9edd,86
-city,750,459,City 87,#4a9edd,87
-city,750,475,City 88,#4a9edd,88
-city,746,469,City 89,#4a9edd,89
-city,746,485,City 90,#4a9edd,90
-city,750,465,City 91,#4a9edd,91
-city,750,481,City 92,#4a9edd,92
-city,736,467,City 93,#4a9edd,93
-city,748,455,City 94,#4a9edd,94
-city,748,471,City 95,#4a9edd,95
-city,750,457,City 96,#4a9edd,96
-city,750,473,City 97,#4a9edd,97
+city,738,459,City 36,#4a9edd,36
+city,748,477,City 37,#4a9edd,37
+city,742,467,City 38,#4a9edd,38
+city,742,483,City 39,#4a9edd,39
+city,746,473,City 40,#4a9edd,40
+city,744,467,City 41,#4a9edd,41
+city,748,479,City 42,#4a9edd,42
+city,744,483,City 43,#4a9edd,43
+city,738,465,City 44,#4a9edd,44
+city,738,481,City 45,#4a9edd,45
+city,748,475,City 46,#4a9edd,46
+city,748,459,City 47,#4a9edd,47
+city,740,483,City 48,#4a9edd,48
+city,746,467,City 49,#4a9edd,49
+city,742,471,City 50,#4a9edd,50
+city,748,481,City 51,#4a9edd,51
+city,746,483,City 52,#4a9edd,52
+city,742,455,City 53,#4a9edd,53
+city,736,477,City 54,#4a9edd,54
+city,736,461,City 55,#4a9edd,55
+city,744,471,City 56,#4a9edd,56
+city,744,455,City 57,#4a9edd,57
+city,740,471,City 58,#4a9edd,58
+city,736,475,City 59,#4a9edd,59
+city,740,455,City 60,#4a9edd,60
+city,736,459,City 61,#4a9edd,61
+city,748,473,City 62,#4a9edd,62
+city,748,457,City 63,#4a9edd,63
+city,746,471,City 64,#4a9edd,64
+city,746,455,City 65,#4a9edd,65
+city,736,465,City 66,#4a9edd,66
+city,736,481,City 67,#4a9edd,67
+city,750,477,City 68,#4a9edd,68
+city,750,461,City 69,#4a9edd,69
+city,742,469,City 70,#4a9edd,70
+city,742,485,City 71,#4a9edd,71
+city,750,463,City 72,#4a9edd,72
+city,750,479,City 73,#4a9edd,73
+city,744,485,City 74,#4a9edd,74
+city,748,467,City 75,#4a9edd,75
+city,748,483,City 76,#4a9edd,76
+city,750,475,City 77,#4a9edd,77
+city,750,459,City 78,#4a9edd,78
+city,738,471,City 79,#4a9edd,79
+city,736,473,City 80,#4a9edd,80
+city,740,485,City 81,#4a9edd,81
+city,738,455,City 82,#4a9edd,82
+city,736,457,City 83,#4a9edd,83
+city,750,465,City 84,#4a9edd,84
+city,746,469,City 85,#4a9edd,85
+city,748,471,City 86,#4a9edd,86
+city,748,455,City 87,#4a9edd,87
+city,734,477,City 88,#4a9edd,88
+city,734,461,City 89,#4a9edd,89
+city,744,453,City 90,#4a9edd,90
+city,734,463,City 91,#4a9edd,91
+city,734,479,City 92,#4a9edd,92
+city,750,473,City 93,#4a9edd,93
+city,750,457,City 94,#4a9edd,94
+city,746,453,City 95,#4a9edd,95
+city,736,471,City 96,#4a9edd,96
+city,734,465,City 97,#4a9edd,97
 city,736,455,City 98,#4a9edd,98
-city,736,471,City 99,#4a9edd,99
-city,750,467,City 100,#4a9edd,100
+city,734,481,City 99,#4a9edd,99
+city,748,469,City 100,#4a9edd,100
 banner,775,445,banner,#95a5a6,1
 banner,768,445,banner,#95a5a6,2
 banner,761,445,banner,#95a5a6,3
@@ -143,14 +143,10 @@ banner,750,501,banner,#95a5a6,38
 banner,745,477,banner,#95a5a6,39
 banner,744,480,banner,#95a5a6,40
 banner,743,487,banner,#95a5a6,41
-banner,739,458,banner,#95a5a6,42
-banner,752,480,banner,#95a5a6,43
-banner,744,464,banner,#95a5a6,44
-banner,750,483,banner,#95a5a6,45
-banner,744,470,banner,#95a5a6,46
-banner,745,464,banner,#95a5a6,47
-banner,745,470,banner,#95a5a6,48
-banner,752,459,banner,#95a5a6,49
-banner,739,474,banner,#95a5a6,50
-banner,737,465,banner,#95a5a6,51
-banner,737,481,banner,#95a5a6,52
+banner,739,457,banner,#95a5a6,42
+banner,744,464,banner,#95a5a6,43
+banner,745,470,banner,#95a5a6,44
+banner,738,473,banner,#95a5a6,45
+banner,737,480,banner,#95a5a6,46
+banner,750,481,banner,#95a5a6,47
+banner,737,463,banner,#95a5a6,48
