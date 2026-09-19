@@ -102,52 +102,55 @@ city,750,473,City 97,#4a9edd,97
 city,736,455,City 98,#4a9edd,98
 city,736,471,City 99,#4a9edd,99
 city,750,467,City 100,#4a9edd,100
-banner,775,445,GLD,#aaaaaa,1
-banner,768,445,GLD,#aaaaaa,2
-banner,761,445,GLD,#aaaaaa,3
-banner,781,452,GLD,#aaaaaa,4
-banner,774,452,GLD,#aaaaaa,5
-banner,767,452,GLD,#aaaaaa,6
-banner,760,452,GLD,#aaaaaa,7
-banner,753,452,GLD,#aaaaaa,8
-banner,781,459,GLD,#aaaaaa,9
-banner,774,459,GLD,#aaaaaa,10
-banner,767,459,GLD,#aaaaaa,11
-banner,760,459,GLD,#aaaaaa,12
-banner,753,459,GLD,#aaaaaa,13
-banner,781,466,GLD,#aaaaaa,14
-banner,774,466,GLD,#aaaaaa,15
-banner,767,466,GLD,#aaaaaa,16
-banner,746,458,GLD,#aaaaaa,17
-banner,746,451,GLD,#aaaaaa,18
-banner,754,481,GLD,#aaaaaa,19
-banner,761,482,GLD,#aaaaaa,20
-banner,767,481,GLD,#aaaaaa,21
-banner,774,485,GLD,#aaaaaa,22
-banner,761,489,GLD,#aaaaaa,23
-banner,767,488,GLD,#aaaaaa,24
-banner,774,492,GLD,#aaaaaa,25
-banner,756,490,GLD,#aaaaaa,26
-banner,762,494,GLD,#aaaaaa,27
-banner,767,495,GLD,#aaaaaa,28
-banner,757,495,GLD,#aaaaaa,29
-banner,774,499,GLD,#aaaaaa,30
-banner,754,445,GLD,#aaaaaa,31
-banner,755,439,GLD,#aaaaaa,32
-banner,762,438,GLD,#aaaaaa,33
-banner,751,432,GLD,#aaaaaa,34
-banner,745,425,GLD,#aaaaaa,35
-banner,781,490,GLD,#aaaaaa,36
-banner,788,493,GLD,#aaaaaa,37
-banner,750,501,GLD,#aaaaaa,38
-banner,744,480,new 1,#f1c40f,101
-banner,739,458,new 2,#f1c40f,102
-banner,745,477,new 3,#f1c40f,103
-banner,752,480,new 4,#f1c40f,104
-banner,744,464,new 5,#f1c40f,105
-banner,750,483,new 6,#f1c40f,106
-banner,744,470,new 7,#f1c40f,107
-banner,739,474,new 8,#f1c40f,108
-banner,737,465,new 9,#f1c40f,109
-banner,737,481,new 10,#f1c40f,110
-banner,743,487,new 11,#f1c40f,111
+banner,775,445,banner,#95a5a6,1
+banner,768,445,banner,#95a5a6,2
+banner,761,445,banner,#95a5a6,3
+banner,781,452,banner,#95a5a6,4
+banner,774,452,banner,#95a5a6,5
+banner,767,452,banner,#95a5a6,6
+banner,760,452,banner,#95a5a6,7
+banner,753,452,banner,#95a5a6,8
+banner,781,459,banner,#95a5a6,9
+banner,774,459,banner,#95a5a6,10
+banner,767,459,banner,#95a5a6,11
+banner,760,459,banner,#95a5a6,12
+banner,753,459,banner,#95a5a6,13
+banner,781,466,banner,#95a5a6,14
+banner,774,466,banner,#95a5a6,15
+banner,767,466,banner,#95a5a6,16
+banner,746,458,banner,#95a5a6,17
+banner,746,451,banner,#95a5a6,18
+banner,754,481,banner,#95a5a6,19
+banner,761,482,banner,#95a5a6,20
+banner,767,481,banner,#95a5a6,21
+banner,774,485,banner,#95a5a6,22
+banner,761,489,banner,#95a5a6,23
+banner,767,488,banner,#95a5a6,24
+banner,774,492,banner,#95a5a6,25
+banner,756,490,banner,#95a5a6,26
+banner,762,494,banner,#95a5a6,27
+banner,767,495,banner,#95a5a6,28
+banner,757,495,banner,#95a5a6,29
+banner,774,499,banner,#95a5a6,30
+banner,754,445,banner,#95a5a6,31
+banner,755,439,banner,#95a5a6,32
+banner,762,438,banner,#95a5a6,33
+banner,751,432,banner,#95a5a6,34
+banner,745,425,banner,#95a5a6,35
+banner,781,490,banner,#95a5a6,36
+banner,788,493,banner,#95a5a6,37
+banner,750,501,banner,#95a5a6,38
+banner,745,477,banner,#95a5a6,39
+banner,744,480,banner,#95a5a6,40
+banner,743,487,banner,#95a5a6,41
+banner,739,458,banner,#95a5a6,42
+banner,752,480,banner,#95a5a6,43
+banner,744,464,banner,#95a5a6,44
+banner,750,483,banner,#95a5a6,45
+banner,744,470,banner,#95a5a6,46
+banner,745,464,banner,#95a5a6,47
+banner,745,470,banner,#95a5a6,48
+banner,752,459,banner,#95a5a6,49
+banner,739,474,banner,#95a5a6,50
+banner,737,465,banner,#95a5a6,51
+banner,737,481,banner,#95a5a6,52
