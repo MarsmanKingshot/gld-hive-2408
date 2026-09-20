@@ -147,8 +147,8 @@ function bigBuilding(b, fill, name){
   g.push(`<text class="svgtxt" x="${c.sx}" y="${c.sy+9}" font-size="9" text-anchor="middle">${b.x}:${b.y}</text>`);
 }
 for (const [x,y] of D.banners){ g.push(`<polygon points="${diamond(x,y,1,1)}" fill="#c9ced6" stroke="#4b5563" stroke-width=".8"><title>Existing banner ${x}:${y}</title></polygon>`); }
-for (const [x,y] of (D.builtBanners||[])){ const c=centre(x,y,1,1); g.push(`<polygon points="${diamond(x,y,1,1)}" fill="#7fc9a0" stroke="#2e8b57" stroke-width="1"><title>Banner built at ${x}:${y}</title></polygon>`); g.push(`<text class="svgtxt" x="${c.sx}" y="${c.sy-9}" font-size="6.5" text-anchor="middle">${x}:${y}</text>`); }
-for (const [x,y] of D.newBanners){ const c=centre(x,y,1,1); g.push(`<polygon points="${diamond(x,y,1,1)}" fill="#e0c060" stroke="#7a5f14" stroke-width="1"><title>New banner to build at ${x}:${y}</title></polygon>`); g.push(`<text class="svgtxt" x="${c.sx}" y="${c.sy-9}" font-size="6.5" text-anchor="middle">${x}:${y}</text>`); }
+for (const [x,y] of (D.builtBanners||[])){ g.push(`<polygon points="${diamond(x,y,1,1)}" fill="#7fc9a0" stroke="#2e8b57" stroke-width="1"><title>Banner built at ${x}:${y}</title></polygon>`); }
+for (const [x,y] of D.newBanners){ g.push(`<polygon points="${diamond(x,y,1,1)}" fill="#e0c060" stroke="#7a5f14" stroke-width="1"><title>New banner to build at ${x}:${y}</title></polygon>`); }
 if (D.zone){ const [zx0,zy0,zx1,zy1]=D.zone; const cx0=Math.max(zx0,X0), cy0=Math.max(zy0,Y0), cx1=Math.min(zx1+1,X1), cy1=Math.min(zy1+1,Y1);
   if (cx1>cx0 && cy1>cy0){ g.push(`<polygon points="${diamond(cx0,cy0,cx1-cx0,cy1-cy0)}" fill="rgba(255,255,255,.07)" stroke="#f4f7ef" stroke-width="2.2" stroke-dasharray="7 5"/>`);
     const top=iso(cx1,cy1); g.push(`<text class="svgname" x="${top.sx-8}" y="${top.sy-6}" font-size="12" text-anchor="end">${D.zoneName}, x up to ${zx1} ◀</text>`);
@@ -170,6 +170,7 @@ for (const c of D.cities){
     `<text class="svgname" x="${ce.sx}" y="${ce.sy-1}" font-size="8.5" text-anchor="middle">${short}</text>`+
     `<text class="svgtxt xy" x="${ce.sx}" y="${ce.sy+8}" font-size="6.5" text-anchor="middle">${c.x}:${c.y}</text></g>`);
 }
+for (const [x,y] of D.newBanners){ const c=centre(x,y,1,1); g.push(`<text x="${c.sx}" y="${c.sy-8}" font-size="7" font-weight="700" text-anchor="middle" fill="#3a2a00" stroke="#fff" stroke-width="2.5" paint-order="stroke" style="font-family:JetBrains Mono,ui-monospace,monospace;pointer-events:none">${x}:${y}</text>`); }
 const W=maxx-minx+2*pad, H=maxy-miny+2*pad;
 document.getElementById('map').innerHTML=`<svg viewBox="${(minx-pad).toFixed(1)} ${(miny-pad).toFixed(1)} ${W.toFixed(1)} ${H.toFixed(1)}" role="img" aria-label="Hive map">${g.join('')}</svg>`;
 
