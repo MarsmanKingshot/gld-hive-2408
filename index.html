@@ -81,6 +81,7 @@ fetch("hive_workbook.xlsx?" + Date.now()).then(r => { if (!r.ok) throw new Error
   document.getElementById("poster").innerHTML = `<p class="err">The poster could not be drawn: ${esc(e.message)}. Is hive_workbook.xlsx in the repository with a sheet named "3 Slots"?</p>`;
 });
 </script>
-<script data-fresh>(function(){var v="20260920173236";fetch("version.txt?_="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(t&&t!==v){var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString());}}).catch(function(){});})();</script>
+
+<script data-fresh>(function(){var v="20260920173353";fetch("version.txt?_="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(t&&t!==v){var u=new URL(location.href);u.searchParams.set("v",t);location.replace(u.toString());}}).catch(function(){});})();</script>
 </body>
 </html>
