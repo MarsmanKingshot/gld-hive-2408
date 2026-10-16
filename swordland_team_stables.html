@@ -1,50 +1,33 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Swordland: STABLES team</title><style>
 :root{--ink:#222;--mut:#555;--line:#ddd;--acc:#1f6fd0;--red:#d03a2f;--gold:#b58000;--bg:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.4 Helvetica,Arial,sans-serif}
 .page{max-width:820px;margin:0 auto;padding:12px 16px 32px}
-h1{font-size:26px;margin:8px 0 2px;color:var(--gold)}
+h1{font-size:26px;margin:8px 0 6px;color:var(--gold)}
 h2{font-size:19px;margin:20px 0 6px;border-bottom:2px solid var(--gold);padding-bottom:2px}
 h2.blue{color:var(--acc);border-color:var(--acc)}h2.red{color:var(--red);border-color:var(--red)}
-h3{font-size:16px;margin:12px 0 4px}
-p{margin:6px 0}.lead{font-size:17px}
-table{width:100%;border-collapse:collapse;margin:6px 0;font-size:15px}th,td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}th{background:#f3f3f3}
-ul{margin:4px 0 4px 20px;padding:0}li{margin:4px 0}
-.box{border:2px solid var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0}
+p{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:6px 0;font-size:16px}th,td{border:1px solid var(--line);padding:6px 7px;text-align:left;vertical-align:top}th{background:#f3f3f3}
+td.n{font-weight:700;white-space:nowrap}td.r{color:var(--mut);white-space:nowrap}
+ul{margin:4px 0 4px 20px;padding:0}li{margin:5px 0}
+.box{border:2px solid var(--gold);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:17px}
 .box.blue{border-color:var(--acc)}.box.red{border-color:var(--red)}
-.roles td:first-child{white-space:nowrap;font-weight:700}
-.foot{color:var(--mut);font-size:14px;margin-top:20px}
-a{color:var(--acc)}
-@media print{body{font-size:12px}.page{padding:0}h1{font-size:20px}h2{font-size:14px}table{font-size:11px}th,td{padding:3px 5px}svg{max-height:360px}@page{size:A4;margin:10mm}}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin:8px 0}@media(max-width:560px){.people{grid-template-columns:1fr}}
+.who{border:1px solid var(--line);border-radius:8px;padding:6px 10px}.who b{font-size:18px}.who span{color:var(--mut);margin-left:6px}
+.who ol{margin:3px 0 0 20px;padding:0}.who li{margin:2px 0}
+.foot{color:var(--mut);font-size:14px;margin-top:20px}a{color:var(--acc)}
+@media print{body{font-size:12px}.page{padding:0}svg{max-height:360px}@page{size:A4;margin:10mm}}
 </style></head><body><div class="page">
-<h1>Swordland: STABLES team</h1>
-<p class="lead">Five people: a lead who also strikes, an anchor (top ten) and a looter on the field; two joiners in the safe zone. The lead decides for the team; no central caller, no waiting for a call.</p>
-<table class="roles"><tr><th>Role</th><th>Who</th></tr>
-<tr><td>Lead</td><td>Ode_To_A_Pickle</td></tr>
-<tr><td>Anchor</td><td>The Watcher</td></tr>
-<tr><td>Striker</td><td>Ode_To_A_Pickle</td></tr>
-<tr><td>Looter</td><td>Coperani</td></tr>
-<tr><td>Joiners (safe zone)</td><td>Tanaris, ElpanditoVonDoom</td></tr>
-</table>
-<p>Substitutes are one pool for all teams, in this order, for any empty seat: Fabled Hero, Zhu, Mohamed, Toppo, Leo_toooooooot, VaeLith, Tony, lordiest loki, Angel_Odinsdott, DeepSea.</p>
-<h2>Your building and your job</h2>
-<p class="lead">Your building is the <b>Stables</b>, the buff building at the <b>bottom corner</b> of the map. It scores 1,200 on capture and 240 a minute, and it halves the teleport cooldown for whoever holds it, which is why it is contested whichever colour we get. Capture at 0:00 and hold for the hour.</p>
-<h2>Your marches: four to six each, none idle</h2>
-<table class="roles"><tr><th>Role</th><th>March 1</th><th>March 2</th><th>March 3</th><th>Marches 4 to 6</th></tr>
-<tr><td>Anchor (field)</td><td>Main march in the building, defence lineup, never recalled</td><td>Striker's city</td><td>Trains near the building, then nodes</td><td>Trains near the building, then nodes</td></tr>
-<tr><td>Striker (field)</td><td>Main march kept free to rally</td><td>Anchor's city</td><td>Trains near the building, then nodes</td><td>Trains near the building, then nodes</td></tr>
-<tr><td>Looter (field)</td><td>Free for trains</td><td>Free for trains</td><td>Between trains, five troops to the nodes nearest the team's building</td><td>Same</td></tr>
-<tr><td>Joiner (safe zone)</td><td>Anchor's city, with speedups</td><td>The team's building, with speedups</td><td>Kept free: joins the lead's rally, or tops up the building or the anchor's city when the lead calls REINFORCE</td><td>Trains the moment a building near us flips, otherwise the minimum, five troops, to an Undercellar on our side</td></tr>
-</table>
-<p><b>Garrison pairs.</b> Both joiners reinforce the anchor's city with their first march, the lead's city with their second; the third joiner march goes into the Stables; the looter gets the next.</p>
-<table><tr><th>City on the field</th><th>Reinforced by (first march, with speedups)</th></tr>
-<tr><td>The Watcher</td><td>Tanaris, ElpanditoVonDoom</td></tr>
-<tr><td>Ode_To_A_Pickle</td><td>Tanaris (second), ElpanditoVonDoom (second)</td></tr>
-<tr><td>Coperani</td><td>ElpanditoVonDoom (third)</td></tr>
-</table>
-<p>A gathering march carries the minimum the game lets you send, five troops. That empties a node and losing five troops costs nothing. Never send more: the troops are needed in the buildings. Trains first, Undercellars second, always on our side of the line, never by teleport.</p>
-<p><b>Topping up.</b> Troops injured in the building go to the field infirmary on their own, so the garrison shrinks after every hit. Nothing is swapped or recalled: when the lead calls REINFORCE, send another march and the game takes whatever fits under your own cap. Heal in the field infirmary, which is free, and send again. The lead checks the troop count above the building every five minutes and after every rally against it.</p>
-<h2 class="blue">If we are BLUE: our spawn on the LEFT</h2>
+<h1>STABLES team</h1>
+<p>Your building is the <b>Stables</b>, the buff building at the bottom corner. 1,200 on capture, 240 a minute, and it halves the teleport cooldown for whoever holds it, so it is contested whichever colour we get. Capture at 0:00 and hold for the hour.</p>
+<div class="people">
+<div class="who"><b>Ode_To_A_Pickle</b> <span>Lead, striker</span><ol><li>Pin the Stables. Decide. Rally the enemy cities parked beside it</li><li>Reinforce The Watcher</li><li>Trains</li></ol></div>
+<div class="who"><b>The Watcher</b> <span>Anchor</span><ol><li>Main march in the Stables from 0:00, defence lineup. Never teleport while it is in</li><li>Reinforce Ode_To_A_Pickle</li><li>Trains</li></ol></div>
+<div class="who"><b>Coperani</b> <span>Looter</span><ol><li>Every Baggage Train near the Stables</li><li>Undercellars, five troops a node</li><li>Join Ode_To_A_Pickle&#x27;s rallies</li></ol></div>
+<div class="who"><b>Tanaris</b> <span>Joiner</span><ol><li>Reinforce The Watcher</li><li>Reinforce the Stables, speedups on</li><li>Join Ode_To_A_Pickle&#x27;s rallies</li></ol></div>
+<div class="who"><b>ElpanditoVonDoom</b> <span>Joiner</span><ol><li>Reinforce The Watcher</li><li>Reinforce the Stables, speedups on</li><li>Join Ode_To_A_Pickle&#x27;s rallies</li></ol></div>
+</div>
+<p>Subs, any empty seat, in this order: Fabled Hero, Zhu, Mohamed, Toppo, Leo_toooooooot, VaeLith, Tony, lordiest loki, Angel_Odinsdott, DeepSea.</p>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" font-family="Helvetica, Arial, sans-serif" style="width:100%;height:auto;display:block">
 <text x="400.0" y="40" font-size="30" font-weight="700" text-anchor="middle" fill="#1f6fd0">We are BLUE: our spawn on the LEFT</text>
 <polygon points="410,55 795,385 410,735 25,385" fill="#f1e3c8" stroke="#8a6d3b" stroke-width="3"/>
@@ -106,8 +89,7 @@ a{color:var(--acc)}
 <text x="400.0" y="776" font-size="14" text-anchor="middle" fill="#555">Thin ring: enemy, nobody touches it before 45:00. U: Undercellars, ours in gold.</text>
 <text x="400.0" y="796" font-size="14" text-anchor="middle" fill="#555">Park one screen from your building, toward our spawn. Never beside the building, never beside a teammate.</text>
 </svg>
-<div class="box blue"><p>The Stables is on the <b>right</b> half, their side, two screens from our Corner Abbey. We take it anyway. Teleport to the bottom corner beside the Corner Abbey team, park one screen from the Stables toward our Corner Abbey, and the two teams cover each other. Expect their Corner Abbey team's striker to come for you.</p></div>
-<h2 class="red">If we are RED: our spawn on the RIGHT</h2>
+<div class="box blue">The Stables is on <b>their</b> half, bottom corner, two screens from our Corner Abbey. We take it anyway. Park beside the Corner Abbey team; the two teams cover each other.</div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" font-family="Helvetica, Arial, sans-serif" style="width:100%;height:auto;display:block">
 <text x="400.0" y="40" font-size="30" font-weight="700" text-anchor="middle" fill="#d03a2f">We are RED: our spawn on the RIGHT</text>
 <polygon points="410,55 795,385 410,735 25,385" fill="#f1e3c8" stroke="#8a6d3b" stroke-width="3"/>
@@ -168,46 +150,13 @@ a{color:var(--acc)}
 <text x="400.0" y="776" font-size="14" text-anchor="middle" fill="#555">Thin ring: enemy, nobody touches it before 45:00. U: Undercellars, ours in gold.</text>
 <text x="400.0" y="796" font-size="14" text-anchor="middle" fill="#555">Park one screen from your building, toward our spawn. Never beside the building, never beside a teammate.</text>
 </svg>
-<div class="box red"><p>The Stables is <b>our home buff building</b>, bottom corner of the right half, one and a half screens from our Sanctum. Park one screen from it toward our spawn. The enemy Corner Abbey team sits next door at the bottom corner and will try for it.</p></div>
-<h2>Your hour</h2>
-<table><tr><th>Clock</th><th>What this team does</th></tr>
-<tr><td><b>0:00</b></td><td>Everyone enters and opens the full map. Anchor teleports one screen from the Stables toward our side; joiners reinforce the anchor's city, then the Stables.</td></tr>
-<tr><td><b>3:00</b></td><td>Capture done. Hold. The lead rallies any enemy city parked beside the Stables.</td></tr>
-<tr><td><b>15:00</b></td><td>Undercellars appear. Spare marches take a node only if it is still empty, five troops each.</td></tr>
-<tr><td><b>20:00</b></td><td>Score posted. Holding marches stay where they are.</td></tr>
-<tr><td><b>45:00</b></td><td>Score posted. No extra building for this team.</td></tr>
-<tr><td><b>50:00</b></td><td>If we are behind: the lead joins the burst rallies named by the Shrine lead; the looter marches on the trains; the anchor stays in the Stables. If ahead: nobody moves.</td></tr>
+<div class="box red">The Stables is <b>ours</b>, bottom corner, one and a half screens from our Sanctum. Park one screen from it toward our spawn. Their Corner Abbey team is next door and wants it.</div>
+<h2>Clock</h2><table>
+<tr><td class="n">0:00</td><td>The Watcher in. Tanaris and Elpandito reinforce The Watcher, then the Stables.</td></tr>
+<tr><td class="n">3:00</td><td>Hold. Ode_To_A_Pickle rallies any enemy city parked beside the Stables.</td></tr>
+<tr><td class="n">45:00</td><td>No extra building for this team.</td></tr>
+<tr><td class="n">50:00</td><td>Behind: Ode_To_A_Pickle joins the burst rallies the Shrine lead names. The Watcher stays in. Ahead: nobody moves.</td></tr>
 </table>
-<h2>When it goes wrong: the lead decides, by these rules</h2>
-
-<h3>Our building is lost</h3>
-<ul>
-<li><b>Trains first, always.</b> The moment it flips, the looter and every spare march go for the Baggage Trains it drops. That is half its bank, on the ground for anyone.</li>
-<li><b>Retake during their capture.</b> Their capture takes three minutes (one and a half if they hold the Bell Tower). In that window the striker burns the enemy city parked beside the building, never the building: a burned anchor is sent to spawn and their march leaves the building. The anchor's main march then goes back in and the joiners' free marches follow with speedups.</li>
-<li><b>Lost twice, or held by more than we can match: stop feeding it.</b> The lead posts "LOST building" in alliance chat. The anchor and striker stay parked one screen away. Joiners' free marches go to the nearest home building in this order: Sanctum, Corner Abbey, Spawn Abbey, Stables. The striker joins the nearest team's rallies.</li>
-<li><b>Take it back when they leave it.</b> Every time their anchor teleports away, the garrison goes with them. Watch the troop count above the building and go back in the moment it drops: spare marches first, the anchor's march once it is ours.</li>
-<li><b>Never empty a second building to retake the first.</b> One building lost is 600 or 1,200 a minute; two lost is the match.</li>
-</ul>
-<h3>Our anchor is burned</h3>
-<p>Their march leaves the building and the anchor is in spawn for twelve minutes. The striker's main march goes into the building at once as stand-in anchor, the joiners top up, and the burned anchor comes back to one screen from the building and re-enters when the stand-in says it is full. If the striker is also gone, the looter's main march holds it.</p>
-<h3>A rally is coming at our building</h3>
-<p>The lead calls REINFORCE; every free march goes in with speedups. The striker burns the rally leader's city if it is parked within one screen. Nobody leaves the building to counter-attack.</p>
-<h3>An enemy building next to ours empties</h3>
-<p>Their anchor teleported and the count above it dropped to one march or none: spare marches only go in, never the anchor's or the striker's main march. If it holds, the lead names a sub-anchor from the joiners. Anything garrisoned on their side of the line is left alone before 50:00.</p>
-<h3>At 45:00</h3>
-<p>The Sanctum lead posts both scores. Ahead by more than 30,000: nobody attacks anything, every garrison is topped up, looters watch for flips. Behind by less than 30,000: at 50:00 two rallies ten seconds apart on the enemy building with the biggest bank, named by the Shrine lead; the strikers of the Stables and Corner Abbey teams join, every looter marches on the trains, home anchors never move. Behind by more than 60,000 against a clearly stronger alliance: every team holds its building for the occupation bonus and sends every spare march collecting for personal points.</p>
-
-<h2>Rules everyone keeps</h2>
-
-<ul>
-<li>One building per team, pinned by the lead before 0:00. No extra building before 45:00, however empty it looks.</li>
-<li>Park one screen from your building, toward our spawn. Never beside the building, never beside a teammate.</li>
-<li>Anchors never teleport while their march is in a building. Teleporting pulls your troops out of everything.</li>
-<li>Rally enemy cities beside a building, never the building, never alone. Join only your own team's rallies. No gems to reach a rally.</li>
-<li>Free speedups on every reinforcement march. They refill one a minute.</li>
-<li>No idle marches. Anything not holding a building or a city is out for trains or Undercellars on our side of the line, the minimum of five troops per node, never more. Nobody ever teleports for one.</li>
-<li>If your city is about to be hit, send everything out and recall at the last second. Being burned costs no troops, only twelve minutes.</li>
-<li>Team chat only. Alliance chat carries the roll call, the score, "REINFORCE building", "LOST building" and "PLAN B". Nothing else.</li>
-</ul>
-<p class="foot">The full plans, with points, the other teams and the map legend: <a href="swordland_blue.html">blue</a>, <a href="swordland_red.html">red</a>. Gold ring on the map: your building. Dashed gold ring: your second job, extra, or Plan B target.</p>
+<h2>If</h2><ul><li><b>Stables lost:</b> Coperani on the trains. Ode_To_A_Pickle burns the city parked beside it. The Watcher goes back in.</li><li><b>Lost twice:</b> post LOST STABLES. Stay parked one screen away and go back in the moment their garrison leaves. Never pull a march out of another building for it.</li><li><b>The Watcher burned:</b> Ode_To_A_Pickle's main march goes into the Stables until The Watcher is back.</li><li><b>Rally coming:</b> Ode_To_A_Pickle calls REINFORCE. Every free march in, speedups on.</li></ul>
+<p class="foot">Gold ring: your building. Dashed ring: second job, extra or Plan B. Whole plan: <a href="swordland_blue.html">blue</a>, <a href="swordland_red.html">red</a>. Teams: <a href="swordland.html">index</a>.</p>
 </div></body></html>
