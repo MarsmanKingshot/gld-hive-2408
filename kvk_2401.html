@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2408 vs 2401</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one narrow card, title band, a two-column score table, one line of reading. */
+:root {
+  --bg: #efe9dc;
+  --card: #fbf8f1;
+  --fg: #26211a;
+  --muted: #6e6557;
+  --rule: #d9d0bd;
+  --gold: #a4731c;
+  --us: #1f5f8b;
+  --them: #9a3b2c;
+  --display: "Cinzel", "Georgia", serif;
+  --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17150f; --card: #221e16; --fg: #efe7d6; --muted: #a79c87; --rule: #3a3327;
+    --gold: #d9a94a; --us: #6fb1e0; --them: #e07a66; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17150f; --card: #221e16; --fg: #efe7d6; --muted: #a79c87; --rule: #3a3327;
+  --gold: #d9a94a; --us: #6fb1e0; --them: #e07a66; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.4;
+  padding-block: 24px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.card {
+  max-width: 420px; margin: 0 auto; background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+  padding: 20px 18px 16px; display: grid; gap: 14px;
+}
+.eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+h1 { font-family: var(--display); font-size: 30px; line-height: 1.1; margin: 0; text-wrap: balance; }
+h1 .us { color: var(--us); } h1 .them { color: var(--them); }
+.when { color: var(--muted); font-size: 14px; margin: 0; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: 7px 4px; border-bottom: 1px solid var(--rule); text-align: right; }
+th:first-child, td:first-child { text-align: left; font-weight: 400; color: var(--muted); padding-left: 0; }
+thead th { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+thead th.us { color: var(--us); } thead th.them { color: var(--them); }
+td.lead { font-weight: 600; }
+tbody tr:last-child td { border-bottom: 0; }
+.read { margin: 0; font-size: 15px; }
+.foot { margin: 0; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div>
+    <div class="eyebrow">Kingdom of Power, season 23</div>
+    <h1><span class="us">2408</span> vs <span class="them">2401</span></h1>
+  </div>
+  <p class="when">Prep Mon 2 to Sat 7 Nov. Battle Sat 7 Nov, 10:00 to 22:00 UTC.</p>
+  <table>
+    <thead><tr><th></th><th class="us">2408</th><th class="them">2401</th></tr></thead>
+    <tbody>
+      <tr><td>Kingdom opened</td><td>9 Aug</td><td>7 Aug</td></tr>
+      <tr><td>Top 5 power</td><td>540M</td><td class="lead">569M</td></tr>
+      <tr><td>Top 20 power</td><td class="lead">1.72B</td><td>1.67B</td></tr>
+      <tr><td>Top 100 power</td><td class="lead">5.82B</td><td>5.45B</td></tr>
+      <tr><td>Cities at TC 30</td><td class="lead">53</td><td>37</td></tr>
+      <tr><td>Troop power, top 100</td><td>2.53B</td><td class="lead">2.68B</td></tr>
+      <tr><td>Kills, top 100</td><td class="lead">763M</td><td>485M</td></tr>
+      <tr><td>Strongest alliance</td><td>GLD 4.63B</td><td class="lead">DMG 4.78B</td></tr>
+    </tbody>
+  </table>
+  <p class="read">An even match. They have the stronger top five and a little more troop power. We have more depth, more TC 30 cities and far more kills.</p>
+  <p class="foot">Numbers from the in-game rankings of 1 Nov 2026 via MightPulse. Bold marks the higher side.</p>
+</div>
+</body>
+</html>
