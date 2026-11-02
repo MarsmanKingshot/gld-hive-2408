@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Alliance Cannot Hold the Castle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+/* Layout: a single reading column, like a one-page brief handed round before a meeting. */
+:root {
+  --bg: #f7f8fa;
+  --fg: #1c2230;
+  --muted: #5b6474;
+  --rule: #d6dbe3;
+  --accent: #8a3b12;
+  --panel: #eceff3;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161a21; --fg: #e6e9ee; --muted: #a2abb9; --rule: #2e3540; --accent: #e08a5a; --panel: #1f242d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161a21; --fg: #e6e9ee; --muted: #a2abb9; --rule: #2e3540; --accent: #e08a5a; --panel: #1f242d; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 17px; line-height: 1.55;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 640px; margin: 0 auto; min-width: 0; }
+.eyebrow { font-family: var(--display); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { font-family: var(--display); font-size: clamp(28px, 6vw, 38px); line-height: 1.12; margin: 8px 0 12px; text-wrap: balance; font-weight: 700; }
+.lede { font-size: 19px; line-height: 1.5; margin: 0 0 28px; }
+h2 { font-family: var(--display); font-size: 19px; font-weight: 700; margin: 36px 0 8px; text-wrap: balance; }
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+em { font-style: italic; }
+.wrap { overflow-x: auto; margin: 10px 0 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 16px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--display); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+td.num { text-align: right; white-space: nowrap; }
+.callout { background: var(--panel); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 20px 0; }
+.callout p:last-child { margin-bottom: 0; }
+.foot { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; }
+.foot p { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Kingdom 2408 · Kingdom of Power · Castle battle Saturday 7 November, 12:00 to 17:00 UTC</div>
+  <h1>Why one alliance cannot hold the King's Castle alone</h1>
+  <p class="lede">A note for alliance leaders in 2408 before the battle against kingdom 2401. The short version: the castle fight is a kingdom job, and an alliance that goes in by itself can block the enemy but cannot win.</p>
+
+  <h2>The castle fight is five jobs at the same time</h2>
+  <ul>
+    <li><strong>Hold the castle.</strong> One garrison, under the best built account we have, refilled every time a fight ends.</li>
+    <li><strong>Hold four turrets.</strong> Four separate teams, each ready to rally its turret back the moment it flips.</li>
+    <li><strong>Counter-rally.</strong> A team with a rally ready to hit any enemy rally the second it lands.</li>
+    <li><strong>Refill.</strong> Marches queued so the castle is never empty after a capture.</li>
+    <li><strong>Heal.</strong> Everyone batch-healing on a cycle so troops come back.</li>
+  </ul>
+  <p>Every rally needs its own leader, and a player can lead one rally at a time. One alliance runs out of capable leaders long before it runs out of jobs.</p>
+
+  <h2>Lost turrets melt the garrison</h2>
+  <p>A turret held by the enemy fires on the castle, and it fires faster the longer they keep it. With all four turrets in enemy hands the castle loses roughly one twelfth of its troops every minute. Turrets in friendly hands fire nothing and add up to one fifth more Lethality to the garrison instead.</p>
+  <p>Whoever holds the castle without the turrets is holding a sieve. The guides give the turrets to the second and third strongest leaders, which in practice means the second and third alliances of the kingdom.</p>
+
+  <h2>The rules assume several alliances</h2>
+  <p>There are two clocks. The win goes to the <em>kingdom</em> that holds the castle for two and a half hours without a break. Which alliance of that kingdom is holding may change during that time. If nobody reaches that, the fallback win goes to the kingdom of the single <em>alliance</em> that held the castle longest.</p>
+  <p>Both rules only pay off with coordination. Other alliances of 2408 can relieve or retake the castle without resetting our clock, and the kingdom must agree before noon which alliance keeps all the hold time for the fallback. An alliance that goes alone throws away the relief and risks splitting the fallback time.</p>
+
+  <h2>The numbers are against any single alliance of ours</h2>
+  <div class="wrap">
+  <table>
+    <tr><th>Alliance</th><th>Kingdom</th><th class="num">Power</th></tr>
+    <tr><td>DMG</td><td>2401</td><td class="num">4.78 B</td></tr>
+    <tr><td>GLD</td><td>2408</td><td class="num">4.63 B</td></tr>
+    <tr><td>LST</td><td>2408</td><td class="num">4.25 B</td></tr>
+    <tr><td>BOO</td><td>2401</td><td class="num">3.92 B</td></tr>
+    <tr><td>CRN</td><td>2408</td><td class="num">3.70 B</td></tr>
+    <tr><td>HAR</td><td>2401</td><td class="num">3.38 B</td></tr>
+  </table>
+  </div>
+  <p>Their top alliance outweighs our top alliance, and they will bring their second and third as well. Our edge over 2401 is depth: more Town Center 30 cities, a heavier top two hundred, and far more kills. That edge only exists on the field if our second and third alliances are fighting beside the first. One guide notes that three coordinated players of half the power can displace a single defender twice their size. That cuts both ways.</p>
+
+  <h2>Every guide says the same thing</h2>
+  <ul>
+    <li>Kingshotwiki: "Coordinate with other alliances. One alliance alone is unlikely to win."</li>
+    <li>Kingshotwin: a solo wrecker cannot hold the King's Castle long enough to win; the role agreement "has to be in place before 12:00 UTC".</li>
+    <li>Kingshotmastery: competitive kingdoms consolidate their strongest players into one or two shell alliances for the fight.</li>
+    <li>Kingshotwiki again: against a strong opponent, split into an A team that holds and a B team that counter-rallies.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>What one alliance can do alone is deny.</strong> Any recapture by the defender, however brief, resets the attacker's continuous clock. After 14:30 UTC the attacker can only win on the fallback. So a single alliance can stop 2401 from winning outright. Holding the castle through to a win is a kingdom job.</p>
+  </div>
+
+  <h2>What this asks of the leaders</h2>
+  <ul>
+    <li>Agree before Saturday noon which alliance holds the castle and which alliances take which turrets.</li>
+    <li>Keep all castle hold time in the one holder alliance, so the fallback counts for us.</li>
+    <li>Put the counter-rally in a second alliance, with its leader on a voice call with the holder.</li>
+    <li>Everyone else keeps refill marches queued and heals on the half hour.</li>
+  </ul>
+
+  <div class="foot">
+    <p>Written 2 November 2026 from the in-game Kingdom of Power rules, the Century Games Help Center, and the fan guides named above. Alliance powers are from the in-game rank lists read on 1 November 2026.</p>
+  </div>
+</main>
+</body>
+</html>
